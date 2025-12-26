@@ -12,8 +12,7 @@ import { CustomRequest } from "../interfaces/auth";
 
 export const generateWBS = async (req: CustomRequest, res: Response) => {
   try {
-    const OPENROUTER_API_KEY =
-      "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";
+    const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY as string;
     const MODEL = "openai/gpt-4o";
     const { projectName, scope } = req.body;
     const prompt = buildPrompt({ projectName, scope });
