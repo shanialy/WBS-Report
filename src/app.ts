@@ -17,7 +17,7 @@ const app = express();
 
 connectDB();
 app.get("/", (req: Request, res: Response) => {
-  return res.json({ message: "Welcome to TSH HRM APIs" });
+  return res.json({ message: "Welcome to WBS APIs" });
 });
 
 const swaggerSpec = swaggerJSDoc(swaggerOptions);
